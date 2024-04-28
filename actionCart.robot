@@ -145,6 +145,9 @@ Click Cancel Button
     Click Element   ${CancelButton}
     Sleep   1s
 
+Get Data Error Message 
+    Wait Until Element Is Visible   //div[@class='error-message-container error']   10s
+
 *** Test Cases ***
 Add Remove Products
     Maximize Browser Window
@@ -198,3 +201,18 @@ Cancel Checkout
     Verify checkout overview page
     Click Cancel Button
     Verify products page
+
+Data Error Checkout
+    Maximize Browser Window
+    Input Username
+    Input Password
+    Click button login
+    Verify products to add to cart
+    Click Add Products To Cart
+    Verifies The Number Of Products Added
+    Click The Cart Button
+    Verify Checkout Button
+    Click Checkout Button
+    Verify personal data checkout page
+    Click continue button
+    Get Data Error Message

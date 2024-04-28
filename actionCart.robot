@@ -39,6 +39,7 @@ ${Zip_PostalCodeField}      id:postal-code
 ${ContinueButton}           name:continue
 ${FinishButton}             //button[@data-test='finish'][text()[contains(., 'Finish')]]
 ${BackHomeButton}           id:back-to-products
+${CancelButton}             //button[@data-test='cancel']
 
 *** Keywords ***
 Input Username
@@ -123,6 +124,7 @@ Click continue button
 Verify checkout overview page
     Wait Until Element Is Visible   //span[@class='title'][text()[contains(., 'Checkout: Overview')]]   10s
     Wait Until Element Is Visible   ${FinishButton}   10s
+    Wait Until Element Is Visible   ${CancelButton}   10s
 
 Click finish button
     Click Element   ${FinishButton}
@@ -138,6 +140,10 @@ Click back to products button
 
 Verify products page
     Wait Until Element Is Visible   //*[@class='title'][text()[contains(., 'Products')]]    10s
+
+Click Cancel Button
+    Click Element   ${CancelButton}
+    Sleep   1s
 
 *** Test Cases ***
 Add Remove Products
@@ -173,4 +179,22 @@ Checkout
     Click finish button
     Verify checkout result
     Click back to products button
+    Verify products page
+
+Cancel Checkout
+    Maximize Browser Window
+    Input Username
+    Input Password
+    Click button login
+    Verify products to add to cart
+    Click Add Products To Cart
+    Verifies The Number Of Products Added
+    Click The Cart Button
+    Verify Checkout Button
+    Click Checkout Button
+    Verify personal data checkout page
+    Fill data on personal data checkout page
+    Click continue button
+    Verify checkout overview page
+    Click Cancel Button
     Verify products page

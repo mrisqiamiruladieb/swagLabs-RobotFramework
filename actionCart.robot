@@ -148,6 +148,16 @@ Click Cancel Button
 Get Data Error Message 
     Wait Until Element Is Visible   //div[@class='error-message-container error']   10s
 
+Verify detail product link
+    Wait Until Element Is Visible   id:item_4_title_link    10s
+
+Click detail product link
+    Click Element   id:item_4_title_link
+    Sleep   1s
+
+Verify back to products button
+    Wait Until Element Is Visible   ${BackHomeButton}   10s
+    
 *** Test Cases ***
 Add Remove Products
     Maximize Browser Window
@@ -216,3 +226,18 @@ Data Error Checkout
     Verify personal data checkout page
     Click continue button
     Get Data Error Message
+
+Detail Product
+    Maximize Browser Window
+    Input Username
+    Input Password
+    Click button login
+    Verify products to add to cart
+    Click Add Products To Cart
+    Verifies The Number Of Products Added
+    Click The Cart Button
+    Verify detail product link
+    Click detail product link
+    Verify back to products button
+    Click back to products button
+    Verify products page

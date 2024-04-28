@@ -32,6 +32,13 @@ ${ShoppingCartBadge6}       //span[@class='shopping_cart_badge'][text()[contains
 ${CartButton}               //a[@class='shopping_cart_link']
 ${ContinueShoppingButton}   name:continue-shopping
 ${LogoutButton}             //a[@id='logout_sidebar_link'][text()[contains(., 'Logout')]]
+${CheckoutButton}           //button[@class='btn btn_action btn_medium checkout_button '][text()[contains(., 'Checkout')]]
+${FirstNameField}           id:first-name
+${LastNameField}            name:lastName
+${Zip_PostalCodeField}      id:postal-code
+${ContinueButton}           name:continue
+${FinishButton}             //button[@data-test='finish'][text()[contains(., 'Finish')]]
+${BackHomeButton}           id:back-to-products
 
 *** Keywords ***
 Input Username
@@ -91,6 +98,47 @@ Click Continue Shopping Button
 Verify Remove Products Result
     Wait Until Element Is Visible   ${ShoppingCartBadge1}   10s
 
+Verify Checkout Button
+    Wait Until Element Is Visible   ${CheckoutButton}       10s
+
+Click Checkout Button
+    Click Element   ${CheckoutButton}
+    Sleep   1s
+
+Verify personal data checkout page
+    Wait Until Element Is Visible   ${FirstNameField}   10s
+    Wait Until Element Is Visible   ${LastNameField}   10s
+    Wait Until Element Is Visible   ${Zip_PostalCodeField}   10s
+    Wait Until Element Is Visible   ${ContinueButton}   10s
+
+Fill data on personal data checkout page
+    Input Text  ${FirstNameField}   Red
+    Input Text  ${LastNameField}    Bulls
+    Input Text  ${Zip_PostalCodeField}  12321  
+
+Click continue button
+    Click Element   ${ContinueButton}
+    Sleep   1s
+
+Verify checkout overview page
+    Wait Until Element Is Visible   //span[@class='title'][text()[contains(., 'Checkout: Overview')]]   10s
+    Wait Until Element Is Visible   ${FinishButton}   10s
+
+Click finish button
+    Click Element   ${FinishButton}
+    Sleep   1s
+
+Verify checkout result
+    Wait Until Element Is Visible   //span[@class='title'][text()[contains(., 'Checkout: Complete!')]]  10s
+    Wait Until Element Is Visible   ${BackHomeButton}   10s
+
+Click back to products button
+    Click Element   ${BackHomeButton}
+    Sleep   1s
+
+Verify products page
+    Wait Until Element Is Visible   //*[@class='title'][text()[contains(., 'Products')]]    10s
+
 *** Test Cases ***
 Add Remove Products
     Maximize Browser Window
@@ -106,3 +154,23 @@ Add Remove Products
     Verifies The Number Of Products Removed
     Click Continue Shopping Button
     Verify Remove Products Result
+
+Checkout
+    Maximize Browser Window
+    Input Username
+    Input Password
+    Click button login
+    Verify products to add to cart
+    Click Add Products To Cart
+    Verifies The Number Of Products Added
+    Click The Cart Button
+    Verify Checkout Button
+    Click Checkout Button
+    Verify personal data checkout page
+    Fill data on personal data checkout page
+    Click continue button
+    Verify checkout overview page
+    Click finish button
+    Verify checkout result
+    Click back to products button
+    Verify products page

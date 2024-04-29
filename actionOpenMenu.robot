@@ -17,6 +17,8 @@ ${CartButton}               //a[@class='shopping_cart_link']
 ${OpenMenuButton}           //button[@id='react-burger-menu-btn'][text()[contains(., 'Open Menu')]]
 ${AllItemsButton}           id:inventory_sidebar_link
 ${AboutButton}              id:about_sidebar_link
+${ResetAppStateButton}      id:reset_sidebar_link
+${ShoppingCartBadge1}       //span[@class='shopping_cart_badge'][text()[contains(., '1')]]
 
 *** Keywords ***
 User has logged in
@@ -66,6 +68,16 @@ User click about button
 User verify about button result
     Wait For Expected Condition     Url To Be     https://saucelabs.com/
 
+User verify reset app state button
+    Wait Until Element Is Visible   ${ResetAppStateButton}  10s
+
+User click reset app state button
+    Click Element   ${ResetAppStateButton}
+    Sleep           1s
+
+User verify reset app state result
+    Wait Until Element Is Not Visible   ${ShoppingCartBadge1}   10s
+
 *** Test Cases ***
 All Items Action Open Menu
     Maximize Browser Window
@@ -88,3 +100,14 @@ About Action Open Menu
     User verify about button
     User click about button
     User verify about button result
+
+Reset App State Action Open Menu
+    Maximize Browser Window
+    User has logged in
+    User verify product to add to cart
+    User click add product to cart button
+    User verify cart contents
+    User click open menu link button
+    User verify reset app state button
+    User click reset app state button
+    User verify reset app state result

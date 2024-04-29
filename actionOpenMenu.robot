@@ -16,6 +16,7 @@ ${ShoppingCartBadge1}       //span[@class='shopping_cart_badge'][text()[contains
 ${CartButton}               //a[@class='shopping_cart_link']
 ${OpenMenuButton}           //button[@id='react-burger-menu-btn'][text()[contains(., 'Open Menu')]]
 ${AllItemsButton}           id:inventory_sidebar_link
+${AboutButton}              id:about_sidebar_link
 
 *** Keywords ***
 User has logged in
@@ -55,6 +56,16 @@ User click all items button
 User verify all items button result
     Wait Until Element Is Visible   //span[@class='title'][contains(text(), 'Products')]    10s
 
+User verify about button
+    Wait Until Element Is Visible   ${AboutButton}  10s
+
+User click about button
+    Click Element   ${AboutButton}
+    Sleep           1s
+
+User verify about button result
+    Wait For Expected Condition     Url To Be     https://saucelabs.com/
+
 *** Test Cases ***
 All Items Action Open Menu
     Maximize Browser Window
@@ -68,3 +79,12 @@ All Items Action Open Menu
     User verify all items button
     User click all items button
     User verify all items button result
+
+About Action Open Menu
+    Maximize Browser Window
+    User has logged in
+    User verify open menu link button
+    User click open menu link button
+    User verify about button
+    User click about button
+    User verify about button result

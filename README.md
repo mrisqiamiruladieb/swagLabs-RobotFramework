@@ -12,7 +12,10 @@ Web Automation
    - *Run all the test cases in Robot Framework*
      - Syntax: `robot  Test Suite Name`
      - Example: `robot Aquarium_Project.robot`
-4. User verify about button result (actionOpenMenu.robot)
+4. **Check the window url** - User verify about button result (actionOpenMenu.robot)
    - Example: `Wait For Expected Condition`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Url To Be`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`www.url.com`
    - [Wait For Expected Condition](https://robotframework.org/SeleniumLibrary/SeleniumLibrary.html#Wait%20For%20Expected%20Condition)     
    - [Url To Be](https://www.selenium.dev/selenium/docs/api/py/webdriver_support/selenium.webdriver.support.expected_conditions.html#selenium.webdriver.support.expected_conditions.url_to_be)
+5. **Switch window** - User verify twitter link result (footerLinks.robot)
+   - Example: `Switch Window`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`NEW`
+   - [Switch Window](https://robotframework.org/SeleniumLibrary/SeleniumLibrary.html#Switch%20Window)

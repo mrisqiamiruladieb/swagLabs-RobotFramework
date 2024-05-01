@@ -1,0 +1,3 @@
+UsernameField : //input[@id='user-name']
+PasswordField : //input[@name='password']
+LoginButton   : //input[@type='submit'][@value='Login']

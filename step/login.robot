@@ -2,15 +2,11 @@
 Library                     SeleniumLibrary
 Test Setup                  Open Browser    ${WebSauceDemo}     ${BROWSER}    
 Test Teardown               Close Browser       
+Variables                   ../resources/login_locators.yaml
 
 *** Variables ***
 ${WebSauceDemo}             https://saucedemo.com/
 ${BROWSER}                  chrome
-
-# Locator
-${UsernameField}            //input[@id='user-name']
-${PasswordField}            //input[@name='password']
-${LoginButton}              //input[@type='submit'][@value='Login']
 
 *** Keywords ***
 Input Username

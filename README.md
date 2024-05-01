@@ -8,6 +8,19 @@ Web Automation
 - **main:** utama
 - **POM:** Page Object Modelling
   
+## Step
+---
+1. Create a **resources** folder to store **.yaml files** containing **variables** or **locators** of a test feature
+   - Example: `resources/login_locators.yaml`
+2. Create a **step** folder to store **test files** for testing a feature
+   - Example: `step/login.robot`
+3. In the **step/login.robot** file, **import the resources/login_locators.yaml** file in `*** Settings ***` so that it can **call variables or locators** 
+   - Example: `***Settings***`
+   - `Variables`&nbsp;&nbsp;&nbsp;&nbsp;`path_of_the_file_resource`
+   - `Variables`&nbsp;&nbsp;&nbsp;&nbsp;`../resources/login_locators.yaml`
+4. *Run*
+   - Example: `robot step/login.robot`
+
 ## Problem and Solving
 ---
 1. **Element not found:** The distance between keywords and arguments must be more than 1 space/tab is recommended 
@@ -26,3 +39,5 @@ Web Automation
 5. **Switch window** - User verify twitter link result (footerLinks.robot)
    - Example: `Switch Window`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`NEW`
    - [Switch Window](https://robotframework.org/SeleniumLibrary/SeleniumLibrary.html#Switch%20Window)
+6. failed: Using YAML variable files requires PyYAML module to be installed - POM mechanisms
+   - Solution: Run in command prompt or terminal: `pip install pyyaml`

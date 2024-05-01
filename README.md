@@ -1,6 +1,13 @@
 # swagLabs-RobotFramework
 Web Automation
-
+<br>
+**Test sites:** https://saucedemo.com/
+<br>
+**Note:** Branch Information
+<br>
+- **main:** utama
+- **POM:** Page Object Modelling
+  
 ## Problem and Solving
 ---
 1. **Element not found:** The distance between keywords and arguments must be more than 1 space/tab is recommended 

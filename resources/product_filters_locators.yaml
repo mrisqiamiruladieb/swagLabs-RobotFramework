@@ -1,0 +1,5 @@
+ProductSortButton : //select[@class='product_sort_container'][@data-test='product-sort-container']
+AscNameProductSortOption  : //option[@value='az'][text()[contains(., 'Name (A to Z)')]]
+DescNameProductSortOption : //option[@value='za'][text()[contains(., 'Name (Z to A)')]]
+AscPriceProductSortOption : //option[@value='lohi'][text()[contains(., 'Price (low to high)')]]
+DescPriceProductSortOption  : //option[@value='hilo'][text()[contains(., 'Price (high to low)')]]

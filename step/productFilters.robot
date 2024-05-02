@@ -2,20 +2,12 @@
 Library         SeleniumLibrary
 Test Setup      Open Browser    ${WebSauceDemo}     ${BROWSER}    
 Test Teardown   Close Browser    
+Variables       ../resources/login_locators.yaml
+Variables       ../resources/product_filters_locators.yaml
 
 *** Variables ***
 ${WebSauceDemo}     https://saucedemo.com/
 ${BROWSER}          chrome
-
-# Locator
-${UsernameField}            //input[@id='user-name']
-${PasswordField}            //input[@name='password']
-${LoginButton}              //input[@type='submit'][@value='Login']
-${ProductSortButton}        //select[@class='product_sort_container'][@data-test='product-sort-container']
-${AscNameProductSortOption}     //option[@value='az'][text()[contains(., 'Name (A to Z)')]]
-${DescNameProductSortOption}    //option[@value='za'][text()[contains(., 'Name (Z to A)')]]
-${AscPriceProductSortOption}     //option[@value='lohi'][text()[contains(., 'Price (low to high)')]]
-${DescPriceProductSortOption}    //option[@value='hilo'][text()[contains(., 'Price (high to low)')]]
 
 *** Keywords ***
 User is on products page

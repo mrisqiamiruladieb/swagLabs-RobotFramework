@@ -1,0 +1,29 @@
+AddSauceLabsBackpack  : id:add-to-cart-sauce-labs-backpack
+AddSauceLabsBikeLight : name:add-to-cart-sauce-labs-bike-light
+AddSauceLabsBoltT-Shirt : id:add-to-cart-sauce-labs-bolt-t-shirt
+AddSauceLabsFleeceJacket : name:add-to-cart-sauce-labs-fleece-jacket
+AddSauceLabsOnesie  : id:add-to-cart-sauce-labs-onesie
+AddTest.allTheThings()T-Shirt(Red)  : name:add-to-cart-test.allthethings()-t-shirt-(red)
+RemoveSauceLabsBackpack : id:remove-sauce-labs-backpack
+RemoveSauceLabsBikeLight  : name:remove-sauce-labs-bike-light
+RemoveSauceLabsBoltT-Shirt  : id:remove-sauce-labs-bolt-t-shirt
+RemoveSauceLabsFleeceJacket : name:remove-sauce-labs-fleece-jacket
+RemoveSauceLabsOnesie : id:remove-sauce-labs-onesie
+RemoveTest.allTheThings()T-Shirt(Red) : name:remove-test.allthethings()-t-shirt-(red)
+ShoppingCartBadge1  : //span[@class='shopping_cart_badge'][text()[contains(., '1')]]
+ShoppingCartBadge2  : //span[@class='shopping_cart_badge'][text()[contains(., '2')]]
+ShoppingCartBadge3  : //span[@class='shopping_cart_badge'][text()[contains(., '3')]]
+ShoppingCartBadge4  : //span[@class='shopping_cart_badge'][text()[contains(., '4')]]
+ShoppingCartBadge5  : //span[@class='shopping_cart_badge'][text()[contains(., '5')]]
+ShoppingCartBadge6  : //span[@class='shopping_cart_badge'][text()[contains(., '6')]]
+CartButton  : //a[@class='shopping_cart_link']
+ContinueShoppingButton  : name:continue-shopping
+LogoutButton  : //a[@id='logout_sidebar_link'][text()[contains(., 'Logout')]]
+CheckoutButton  : //button[@class='btn btn_action btn_medium checkout_button '][text()[contains(., 'Checkout')]]
+FirstNameField  : id:first-name
+LastNameField : name:lastName
+Zip_PostalCodeField : id:postal-code
+ContinueButton  : name:continue
+FinishButton  : //button[@data-test='finish'][text()[contains(., 'Finish')]]
+BackHomeButton  : id:back-to-products
+CancelButton  : //button[@data-test='cancel']

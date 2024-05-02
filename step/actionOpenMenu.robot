@@ -2,23 +2,13 @@
 Library         SeleniumLibrary
 Test Setup      Open Browser    ${WebSauceDemo}     ${BROWSER}    
 Test Teardown   Close Browser    
+Variables       ../resources/login_locators.yaml
+Variables       ../resources/action_cart_locators.yaml
+Variables       ../resources/action_open_menu_locators.yaml
 
 *** Variables ***
 ${WebSauceDemo}     https://saucedemo.com/
 ${BROWSER}          chrome
-
-# Locator
-${UsernameField}            //input[@id='user-name']
-${PasswordField}            //input[@name='password']
-${LoginButton}              //input[@type='submit'][@value='Login']
-${AddSauceLabsBikeLight}    name:add-to-cart-sauce-labs-bike-light
-${ShoppingCartBadge1}       //span[@class='shopping_cart_badge'][text()[contains(., '1')]]
-${CartButton}               //a[@class='shopping_cart_link']
-${OpenMenuButton}           //button[@id='react-burger-menu-btn'][text()[contains(., 'Open Menu')]]
-${AllItemsButton}           id:inventory_sidebar_link
-${AboutButton}              id:about_sidebar_link
-${ResetAppStateButton}      id:reset_sidebar_link
-${ShoppingCartBadge1}       //span[@class='shopping_cart_badge'][text()[contains(., '1')]]
 
 *** Keywords ***
 User has logged in

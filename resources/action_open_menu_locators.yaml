@@ -1,0 +1,4 @@
+OpenMenuButton  : //button[@id='react-burger-menu-btn'][text()[contains(., 'Open Menu')]]
+AllItemsButton  : id:inventory_sidebar_link
+AboutButton : id:about_sidebar_link
+ResetAppStateButton : id:reset_sidebar_link

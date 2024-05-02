@@ -2,17 +2,12 @@
 Library                     SeleniumLibrary
 Test Setup                  Open Browser    ${WebSauceDemo}     ${BROWSER}    
 Test Teardown               Close Browser       
+Variables                   ../resources/login_locators.yaml
+Variables                   ../resources/logout_locators.yaml
 
 *** Variables ***
 ${WebSauceDemo}             https://saucedemo.com/
 ${BROWSER}                  chrome
-
-# Locator
-${UsernameField}            //input[@id='user-name']
-${PasswordField}            //input[@name='password']
-${LoginButton}              //input[@type='submit'][@value='Login']
-${OpenMenuButton}           //button[@id='react-burger-menu-btn'][text()[contains(., 'Open Menu')]]
-${LogoutButton}             //a[@id='logout_sidebar_link'][text()[contains(., 'Logout')]]
 
 *** Keywords ***
 Input Username

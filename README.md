@@ -11,16 +11,11 @@ Web Automation
   
 ## Step
 ---
-1. Create a **resources** folder to store **.yaml files** containing **variables** or **locators** of a test feature
-   - Example: `resources/login_locators.yaml`
-2. Create a **step** folder to store **test files** for testing a feature
-   - Example: `step/login.robot`
-3. In the **step/login.robot** file, **import the resources/login_locators.yaml** file in `*** Settings ***` so that it can **call variables or locators** 
-   - Example: `***Settings***`
-   - `Variables`&nbsp;&nbsp;&nbsp;&nbsp;`path_of_the_file_resource`
-   - `Variables`&nbsp;&nbsp;&nbsp;&nbsp;`../resources/login_locators.yaml`
-4. *Run*
-   - Example: `robot step/login.robot`
+1. Import **Library String** into *** Settings *** in test file (**step/login.robot**)
+   - Example: `Library`&nbsp;&nbsp;&nbsp;&nbsp;`String`
+2. Create a variable to hold the command to generate random data in keywords and call the variable
+   - Read [tutorial 1](https://stackoverflow.com/questions/35889765/create-and-use-a-random-string-in-robot) and [tutorial 2](https://robotframework.org/robotframework/latest/libraries/String.html#Generate%20Random%20String)
+3. Run
 
 ## Problem and Solving
 ---

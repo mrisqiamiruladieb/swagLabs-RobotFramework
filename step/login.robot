@@ -1,5 +1,6 @@
 *** Settings ***
 Library                     SeleniumLibrary
+Library                     String
 Test Setup                  Open Browser    ${WebSauceDemo}     ${BROWSER}    
 Test Teardown               Close Browser       
 Variables                   ../resources/login_locators.yaml
@@ -13,13 +14,15 @@ Input Username
     Input Text      ${UsernameField}    performance_glitch_user
 
 Input invalid Username
-    Input Text      ${UsernameField}    this_is_wrong
+    ${randomNumbers}  Generate Random String   4   [NUMBERS]  
+    Input Text      ${UsernameField}    this_is_wrong${randomNumbers}
 
 Input Password
     Input Text      ${PasswordField}    secret_sauce
 
 Input invalid Password
-    Input Text      ${PasswordField}    secret_agent
+    ${randomNumbers}  Generate Random String   4   [NUMBERS]  
+    Input Text      ${PasswordField}    secret_agent${randomNumbers}
 
 Click button login
     Click Element   ${LoginButton}

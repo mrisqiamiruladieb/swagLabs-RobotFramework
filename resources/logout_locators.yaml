@@ -1,0 +1,2 @@
+OpenMenuButton  : //button[@id='react-burger-menu-btn'][text()[contains(., 'Open Menu')]]
+LogoutButton    : //a[@id='logout_sidebar_link'][text()[contains(., 'Logout')]]

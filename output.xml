@@ -1,670 +1,117 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.8.3 on win32)" generated="2024-05-01T17:00:53.172553" rpa="false" schemaversion="5">
-<suite id="s1" name="productFilters" source="D:\belajar\swagLabs-RobotFramework\productFilters.robot">
-<test id="s1-t1" name="Ascending Name Product Filters" line="74">
+<robot generator="Robot 7.0 (Python 3.8.3 on win32)" generated="2024-05-02T21:52:32.377542" rpa="false" schemaversion="5">
+<suite id="s1" name="productFilters" source="D:\belajar\swagLabs-RobotFramework\step\productFilters.robot">
+<test id="s1-t1" name="Ascending Name Product Filters" line="66">
 <kw name="Open Browser" owner="SeleniumLibrary" type="SETUP">
-<msg time="2024-05-01T17:00:53.565429" level="INFO">Opening browser 'chrome' to base url 'https://saucedemo.com/'.</msg>
+<msg time="2024-05-02T21:52:32.823408" level="INFO">Opening browser 'chrome' to base url 'https://saucedemo.com/'.</msg>
 <arg>${WebSauceDemo}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-05-01T17:00:53.565062" elapsed="5.380476"/>
+<status status="PASS" start="2024-05-02T21:52:32.822407" elapsed="22.071263"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-05-01T17:00:58.948113" elapsed="0.035129"/>
+<status status="PASS" start="2024-05-02T21:52:54.894634" elapsed="0.035905"/>
 </kw>
 <kw name="User is on products page">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-05-01T17:00:58.988265" level="INFO">Typing text 'error_user' into text field '//input[@id='user-name']'.</msg>
+<msg time="2024-05-02T21:52:54.934527" level="INFO">Typing text 'error_user' into text field '//input[@id='user-name']'.</msg>
 <arg>${UsernameField}</arg>
 <arg>error_user</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-01T17:00:58.987234" elapsed="0.187497"/>
+<status status="PASS" start="2024-05-02T21:52:54.933531" elapsed="0.196475"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-05-01T17:00:59.175728" level="INFO">Typing text 'secret_sauce' into text field '//input[@name='password']'.</msg>
+<msg time="2024-05-02T21:52:55.131002" level="INFO">Typing text 'secret_sauce' into text field '//input[@name='password']'.</msg>
 <arg>${PasswordField}</arg>
 <arg>secret_sauce</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-01T17:00:59.174731" elapsed="0.152593"/>
+<status status="PASS" start="2024-05-02T21:52:55.130006" elapsed="0.154587"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-05-01T17:00:59.328320" level="INFO">Clicking element '//input[@type='submit'][@value='Login']'.</msg>
+<msg time="2024-05-02T21:52:55.285590" level="INFO">Clicking element '//input[@type='submit'][@value='Login']'.</msg>
 <arg>${LoginButton}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-01T17:00:59.328320" elapsed="0.176526"/>
+<status status="PASS" start="2024-05-02T21:52:55.284593" elapsed="0.130648"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-05-01T17:01:00.515311" level="INFO">Slept 1 second.</msg>
+<msg time="2024-05-02T21:52:56.422658" level="INFO">Slept 1 second.</msg>
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-05-01T17:00:59.505844" elapsed="1.009467"/>
+<status status="PASS" start="2024-05-02T21:52:55.415241" elapsed="1.007417"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${ProductSortButton}</arg>
 <arg>10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-05-01T17:01:00.516472" elapsed="0.063581"/>
+<status status="PASS" start="2024-05-02T21:52:56.423569" elapsed="0.165871"/>
 </kw>
-<status status="PASS" start="2024-05-01T17:00:58.986367" elapsed="1.593686"/>
+<status status="PASS" start="2024-05-02T21:52:54.932533" elapsed="1.656907"/>
 </kw>
 <kw name="User click product sort button">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-05-01T17:01:00.583046" level="INFO">Clicking element '//select[@class='product_sort_container'][@data-test='product-sort-container']'.</msg>
+<msg time="2024-05-02T21:52:56.596424" level="INFO">Clicking element '//select[@class='product_sort_container'][@data-test='product-sort-container']'.</msg>
 <arg>${ProductSortButton}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-01T17:01:00.583046" elapsed="0.093749"/>
+<status status="PASS" start="2024-05-02T21:52:56.594466" elapsed="0.115649"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-05-01T17:01:01.692806" level="INFO">Slept 1 second.</msg>
+<msg time="2024-05-02T21:52:57.714695" level="INFO">Slept 1 second.</msg>
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-05-01T17:01:00.676795" elapsed="1.016011"/>
+<status status="PASS" start="2024-05-02T21:52:56.711112" elapsed="1.003583"/>
 </kw>
-<status status="PASS" start="2024-05-01T17:01:00.581089" elapsed="1.112310"/>
+<status status="PASS" start="2024-05-02T21:52:56.592471" elapsed="1.122852"/>
 </kw>
 <kw name="User verify ascending name product sort option">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${AscNameProductSortOption}</arg>
 <arg>10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-05-01T17:01:01.698432" elapsed="0.058791"/>
+<status status="PASS" start="2024-05-02T21:52:57.719310" elapsed="0.054873"/>
 </kw>
-<status status="PASS" start="2024-05-01T17:01:01.696388" elapsed="0.061831"/>
+<status status="PASS" start="2024-05-02T21:52:57.717360" elapsed="0.056823"/>
 </kw>
 <kw name="User click ascending name product sort option">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-05-01T17:01:01.762208" level="INFO">Clicking element '//option[@value='az'][text()[contains(., 'Name (A to Z)')]]'.</msg>
+<msg time="2024-05-02T21:52:57.777195" level="INFO">Clicking element '//option[@value='az'][text()[contains(., 'Name (A to Z)')]]'.</msg>
 <arg>${AscNameProductSortOption}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-01T17:01:01.761229" elapsed="0.071797"/>
+<status status="PASS" start="2024-05-02T21:52:57.776154" elapsed="0.045873"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-05-01T17:01:02.847070" level="INFO">Slept 1 second.</msg>
+<msg time="2024-05-02T21:52:58.823912" level="INFO">Slept 1 second.</msg>
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-05-01T17:01:01.833026" elapsed="1.014044"/>
+<status status="PASS" start="2024-05-02T21:52:57.822027" elapsed="1.001885"/>
 </kw>
-<status status="PASS" start="2024-05-01T17:01:01.759216" elapsed="1.088523"/>
+<status status="PASS" start="2024-05-02T21:52:57.775188" elapsed="1.049514"/>
 </kw>
 <kw name="User verify ascending name product sort result">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>//div[@class='inventory_item'][contains(., 'Sauce Labs Backpack')]</arg>
 <arg>10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-05-01T17:01:02.852786" elapsed="0.052797"/>
+<status status="PASS" start="2024-05-02T21:52:58.828655" elapsed="0.052844"/>
 </kw>
-<status status="PASS" start="2024-05-01T17:01:02.850414" elapsed="0.056163"/>
-</kw>
-<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-05-01T17:01:02.907633" elapsed="4.061690"/>
-</kw>
-<status status="PASS" start="2024-05-01T17:00:53.561440" elapsed="13.409582"/>
-</test>
-<test id="s1-t2" name="Descending Name Product Filters" line="82">
-<kw name="Open Browser" owner="SeleniumLibrary" type="SETUP">
-<msg time="2024-05-01T17:01:06.978993" level="INFO">Opening browser 'chrome' to base url 'https://saucedemo.com/'.</msg>
-<arg>${WebSauceDemo}</arg>
-<arg>${BROWSER}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-05-01T17:01:06.978993" elapsed="5.610372"/>
-</kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-05-01T17:01:12.591131" elapsed="0.031147"/>
-</kw>
-<kw name="User is on products page">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-05-01T17:01:12.625306" level="INFO">Typing text 'error_user' into text field '//input[@id='user-name']'.</msg>
-<arg>${UsernameField}</arg>
-<arg>error_user</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-01T17:01:12.625034" elapsed="0.197741"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-05-01T17:01:12.822775" level="INFO">Typing text 'secret_sauce' into text field '//input[@name='password']'.</msg>
-<arg>${PasswordField}</arg>
-<arg>secret_sauce</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-01T17:01:12.822775" elapsed="0.163528"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-05-01T17:01:12.988298" level="INFO">Clicking element '//input[@type='submit'][@value='Login']'.</msg>
-<arg>${LoginButton}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-01T17:01:12.987305" elapsed="0.132675"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-05-01T17:01:14.123702" level="INFO">Slept 1 second.</msg>
-<arg>1s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-05-01T17:01:13.119980" elapsed="1.003722"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${ProductSortButton}</arg>
-<arg>10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-05-01T17:01:14.123702" elapsed="0.030757"/>
-</kw>
-<status status="PASS" start="2024-05-01T17:01:12.624271" elapsed="1.530188"/>
-</kw>
-<kw name="User click product sort button">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-05-01T17:01:14.157486" level="INFO">Clicking element '//select[@class='product_sort_container'][@data-test='product-sort-container']'.</msg>
-<arg>${ProductSortButton}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-01T17:01:14.156451" elapsed="0.088764"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-05-01T17:01:15.247240" level="INFO">Slept 1 second.</msg>
-<arg>1s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-05-01T17:01:14.246484" elapsed="1.000756"/>
-</kw>
-<status status="PASS" start="2024-05-01T17:01:14.155454" elapsed="1.091786"/>
-</kw>
-<kw name="User verify descending name product sort option">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${DescNameProductSortOption}</arg>
-<arg>10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-05-01T17:01:15.250054" elapsed="0.035055"/>
-</kw>
-<status status="PASS" start="2024-05-01T17:01:15.248096" elapsed="0.037893"/>
-</kw>
-<kw name="User click descending name product sort option">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-05-01T17:01:15.288988" level="INFO">Clicking element '//option[@value='za'][text()[contains(., 'Name (Z to A)')]]'.</msg>
-<arg>${DescNameProductSortOption}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-01T17:01:15.288002" elapsed="0.071758"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-05-01T17:01:16.372014" level="INFO">Slept 1 second.</msg>
-<arg>1s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-05-01T17:01:15.359760" elapsed="1.012254"/>
-</kw>
-<status status="PASS" start="2024-05-01T17:01:15.286954" elapsed="1.086007"/>
-</kw>
-<kw name="User verify descending name product sort result">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<msg time="2024-05-01T17:01:16.686514" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-16.png"&gt;&lt;img src="selenium-screenshot-16.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2024-05-01T17:01:16.687462" level="FAIL">UnexpectedAlertPresentException: Alert Text: Sorting is broken! This error has been reported to Backtrace.
-Message: unexpected alert open: {Alert text : Sorting is broken! This error has been reported to Backtrace.}
-  (Session info: chrome=124.0.6367.92)
-Stacktrace:
-	GetHandleVerifier [0x00007FF7C0F81502+60802]
-	(No symbol) [0x00007FF7C0EFAC02]
-	(No symbol) [0x00007FF7C0DB7CE4]
-	(No symbol) [0x00007FF7C0E4A986]
-	(No symbol) [0x00007FF7C0E2A923]
-	(No symbol) [0x00007FF7C0DF8FEC]
-	(No symbol) [0x00007FF7C0DF9C21]
-	GetHandleVerifier [0x00007FF7C128411D+3217821]
-	GetHandleVerifier [0x00007FF7C12C60B7+3488055]
-	GetHandleVerifier [0x00007FF7C12BF03F+3459263]
-	GetHandleVerifier [0x00007FF7C103B846+823494]
-	(No symbol) [0x00007FF7C0F05F9F]
-	(No symbol) [0x00007FF7C0F00EC4]
-	(No symbol) [0x00007FF7C0F01052]
-	(No symbol) [0x00007FF7C0EF18A4]
-	BaseThreadInitThunk [0x00007FFB0F507344+20]
-	RtlUserThreadStart [0x00007FFB10A026B1+33]
-</msg>
-<arg>//div[@class='inventory_item'][contains(., 'Test.allTheThings() T-Shirt (Red)')]</arg>
-<arg>10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="FAIL" start="2024-05-01T17:01:16.375651" elapsed="0.322744">UnexpectedAlertPresentException: Alert Text: Sorting is broken! This error has been reported to Backtrace.
-Message: unexpected alert open: {Alert text : Sorting is broken! This error has been reported to Backtrace.}
-  (Session info: chrome=124.0.6367.92)
-Stacktrace:
-	GetHandleVerifier [0x00007FF7C0F81502+60802]
-	(No symbol) [0x00007FF7C0EFAC02]
-	(No symbol) [0x00007FF7C0DB7CE4]
-	(No symbol) [0x00007FF7C0E4A986]
-	(No symbol) [0x00007FF7C0E2A923]
-	(No symbol) [0x00007FF7C0DF8FEC]
-	(No symbol) [0x00007FF7C0DF9C21]
-	GetHandleVerifier [0x00007FF7C128411D+3217821]
-	GetHandleVerifier [0x00007FF7C12C60B7+3488055]
-	GetHandleVerifier [0x00007FF7C12BF03F+3459263]
-	GetHandleVerifier [0x00007FF7C103B846+823494]
-	(No symbol) [0x00007FF7C0F05F9F]
-	(No symbol) [0x00007FF7C0F00EC4]
-	(No symbol) [0x00007FF7C0F01052]
-	(No symbol) [0x00007FF7C0EF18A4]
-	BaseThreadInitThunk [0x00007FFB0F507344+20]
-	RtlUserThreadStart [0x00007FFB10A026B1+33]
-</status>
-</kw>
-<status status="FAIL" start="2024-05-01T17:01:16.373958" elapsed="0.324437">UnexpectedAlertPresentException: Alert Text: Sorting is broken! This error has been reported to Backtrace.
-Message: unexpected alert open: {Alert text : Sorting is broken! This error has been reported to Backtrace.}
-  (Session info: chrome=124.0.6367.92)
-Stacktrace:
-	GetHandleVerifier [0x00007FF7C0F81502+60802]
-	(No symbol) [0x00007FF7C0EFAC02]
-	(No symbol) [0x00007FF7C0DB7CE4]
-	(No symbol) [0x00007FF7C0E4A986]
-	(No symbol) [0x00007FF7C0E2A923]
-	(No symbol) [0x00007FF7C0DF8FEC]
-	(No symbol) [0x00007FF7C0DF9C21]
-	GetHandleVerifier [0x00007FF7C128411D+3217821]
-	GetHandleVerifier [0x00007FF7C12C60B7+3488055]
-	GetHandleVerifier [0x00007FF7C12BF03F+3459263]
-	GetHandleVerifier [0x00007FF7C103B846+823494]
-	(No symbol) [0x00007FF7C0F05F9F]
-	(No symbol) [0x00007FF7C0F00EC4]
-	(No symbol) [0x00007FF7C0F01052]
-	(No symbol) [0x00007FF7C0EF18A4]
-	BaseThreadInitThunk [0x00007FFB0F507344+20]
-	RtlUserThreadStart [0x00007FFB10A026B1+33]
-</status>
+<status status="PASS" start="2024-05-02T21:52:58.826687" elapsed="0.055985"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-05-01T17:01:16.700438" elapsed="2.409880"/>
+<status status="PASS" start="2024-05-02T21:52:58.883536" elapsed="2.624407"/>
 </kw>
-<status status="FAIL" start="2024-05-01T17:01:06.976003" elapsed="12.135590">UnexpectedAlertPresentException: Alert Text: Sorting is broken! This error has been reported to Backtrace.
-Message: unexpected alert open: {Alert text : Sorting is broken! This error has been reported to Backtrace.}
-  (Session info: chrome=124.0.6367.92)
-Stacktrace:
-	GetHandleVerifier [0x00007FF7C0F81502+60802]
-	(No symbol) [0x00007FF7C0EFAC02]
-	(No symbol) [0x00007FF7C0DB7CE4]
-	(No symbol) [0x00007FF7C0E4A986]
-	(No symbol) [0x00007FF7C0E2A923]
-	(No symbol) [0x00007FF7C0DF8FEC]
-	(No symbol) [0x00007FF7C0DF9C21]
-	GetHandleVerifier [0x00007FF7C128411D+3217821]
-	GetHandleVerifier [0x00007FF7C12C60B7+3488055]
-	GetHandleVerifier [0x00007FF7C12BF03F+3459263]
-	GetHandleVerifier [0x00007FF7C103B846+823494]
-	(No symbol) [0x00007FF7C0F05F9F]
-	(No symbol) [0x00007FF7C0F00EC4]
-	(No symbol) [0x00007FF7C0F01052]
-	(No symbol) [0x00007FF7C0EF18A4]
-	BaseThreadInitThunk [0x00007FFB0F507344+20]
-	RtlUserThreadStart [0x00007FFB10A026B1+33]
-</status>
+<status status="PASS" start="2024-05-02T21:52:32.819413" elapsed="28.689233"/>
 </test>
-<test id="s1-t3" name="Ascending Price Product Filters" line="90">
-<kw name="Open Browser" owner="SeleniumLibrary" type="SETUP">
-<msg time="2024-05-01T17:01:19.123194" level="INFO">Opening browser 'chrome' to base url 'https://saucedemo.com/'.</msg>
-<arg>${WebSauceDemo}</arg>
-<arg>${BROWSER}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-05-01T17:01:19.122198" elapsed="5.162236"/>
-</kw>
-<kw name="User is on products page">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-05-01T17:01:24.287461" level="INFO">Typing text 'error_user' into text field '//input[@id='user-name']'.</msg>
-<arg>${UsernameField}</arg>
-<arg>error_user</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-01T17:01:24.286429" elapsed="0.214426"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-05-01T17:01:24.501887" level="INFO">Typing text 'secret_sauce' into text field '//input[@name='password']'.</msg>
-<arg>${PasswordField}</arg>
-<arg>secret_sauce</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-01T17:01:24.500855" elapsed="0.162633"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-05-01T17:01:24.664484" level="INFO">Clicking element '//input[@type='submit'][@value='Login']'.</msg>
-<arg>${LoginButton}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-01T17:01:24.664484" elapsed="0.149602"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-05-01T17:01:25.825418" level="INFO">Slept 1 second.</msg>
-<arg>1s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-05-01T17:01:24.814086" elapsed="1.012283"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${ProductSortButton}</arg>
-<arg>10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-05-01T17:01:25.827364" elapsed="0.046867"/>
-</kw>
-<status status="PASS" start="2024-05-01T17:01:24.285432" elapsed="1.588799"/>
-</kw>
-<kw name="User click product sort button">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-05-01T17:01:25.878740" level="INFO">Clicking element '//select[@class='product_sort_container'][@data-test='product-sort-container']'.</msg>
-<arg>${ProductSortButton}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-01T17:01:25.877291" elapsed="0.110721"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-05-01T17:01:26.993572" level="INFO">Slept 1 second.</msg>
-<arg>1s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-05-01T17:01:25.988923" elapsed="1.004649"/>
-</kw>
-<status status="PASS" start="2024-05-01T17:01:25.876226" elapsed="1.118112"/>
-</kw>
-<kw name="User verify ascending price product sort option">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${AscPriceProductSortOption}</arg>
-<arg>10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-05-01T17:01:26.998329" elapsed="0.064817"/>
-</kw>
-<status status="PASS" start="2024-05-01T17:01:26.996379" elapsed="0.066767"/>
-</kw>
-<kw name="User click ascending price product sort option">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-05-01T17:01:27.065214" level="INFO">Clicking element '//option[@value='lohi'][text()[contains(., 'Price (low to high)')]]'.</msg>
-<arg>${AscPriceProductSortOption}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-01T17:01:27.064143" elapsed="0.112834"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-05-01T17:01:28.186548" level="INFO">Slept 1 second.</msg>
-<arg>1s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-05-01T17:01:27.177840" elapsed="1.008708"/>
-</kw>
-<status status="PASS" start="2024-05-01T17:01:27.064143" elapsed="1.123120"/>
-</kw>
-<kw name="User verify ascending price product sort result">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<msg time="2024-05-01T17:01:28.448557" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-17.png"&gt;&lt;img src="selenium-screenshot-17.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2024-05-01T17:01:28.448557" level="FAIL">UnexpectedAlertPresentException: Alert Text: Sorting is broken! This error has been reported to Backtrace.
-Message: unexpected alert open: {Alert text : Sorting is broken! This error has been reported to Backtrace.}
-  (Session info: chrome=124.0.6367.92)
-Stacktrace:
-	GetHandleVerifier [0x00007FF7C0F81502+60802]
-	(No symbol) [0x00007FF7C0EFAC02]
-	(No symbol) [0x00007FF7C0DB7CE4]
-	(No symbol) [0x00007FF7C0E4A986]
-	(No symbol) [0x00007FF7C0E2A923]
-	(No symbol) [0x00007FF7C0DF8FEC]
-	(No symbol) [0x00007FF7C0DF9C21]
-	GetHandleVerifier [0x00007FF7C128411D+3217821]
-	GetHandleVerifier [0x00007FF7C12C60B7+3488055]
-	GetHandleVerifier [0x00007FF7C12BF03F+3459263]
-	GetHandleVerifier [0x00007FF7C103B846+823494]
-	(No symbol) [0x00007FF7C0F05F9F]
-	(No symbol) [0x00007FF7C0F00EC4]
-	(No symbol) [0x00007FF7C0F01052]
-	(No symbol) [0x00007FF7C0EF18A4]
-	BaseThreadInitThunk [0x00007FFB0F507344+20]
-	RtlUserThreadStart [0x00007FFB10A026B1+33]
-</msg>
-<arg>//div[@class='inventory_item'][contains(., 'Sauce Labs Onesie')]</arg>
-<arg>10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="FAIL" start="2024-05-01T17:01:28.192283" elapsed="0.258268">UnexpectedAlertPresentException: Alert Text: Sorting is broken! This error has been reported to Backtrace.
-Message: unexpected alert open: {Alert text : Sorting is broken! This error has been reported to Backtrace.}
-  (Session info: chrome=124.0.6367.92)
-Stacktrace:
-	GetHandleVerifier [0x00007FF7C0F81502+60802]
-	(No symbol) [0x00007FF7C0EFAC02]
-	(No symbol) [0x00007FF7C0DB7CE4]
-	(No symbol) [0x00007FF7C0E4A986]
-	(No symbol) [0x00007FF7C0E2A923]
-	(No symbol) [0x00007FF7C0DF8FEC]
-	(No symbol) [0x00007FF7C0DF9C21]
-	GetHandleVerifier [0x00007FF7C128411D+3217821]
-	GetHandleVerifier [0x00007FF7C12C60B7+3488055]
-	GetHandleVerifier [0x00007FF7C12BF03F+3459263]
-	GetHandleVerifier [0x00007FF7C103B846+823494]
-	(No symbol) [0x00007FF7C0F05F9F]
-	(No symbol) [0x00007FF7C0F00EC4]
-	(No symbol) [0x00007FF7C0F01052]
-	(No symbol) [0x00007FF7C0EF18A4]
-	BaseThreadInitThunk [0x00007FFB0F507344+20]
-	RtlUserThreadStart [0x00007FFB10A026B1+33]
-</status>
-</kw>
-<status status="FAIL" start="2024-05-01T17:01:28.190262" elapsed="0.260289">UnexpectedAlertPresentException: Alert Text: Sorting is broken! This error has been reported to Backtrace.
-Message: unexpected alert open: {Alert text : Sorting is broken! This error has been reported to Backtrace.}
-  (Session info: chrome=124.0.6367.92)
-Stacktrace:
-	GetHandleVerifier [0x00007FF7C0F81502+60802]
-	(No symbol) [0x00007FF7C0EFAC02]
-	(No symbol) [0x00007FF7C0DB7CE4]
-	(No symbol) [0x00007FF7C0E4A986]
-	(No symbol) [0x00007FF7C0E2A923]
-	(No symbol) [0x00007FF7C0DF8FEC]
-	(No symbol) [0x00007FF7C0DF9C21]
-	GetHandleVerifier [0x00007FF7C128411D+3217821]
-	GetHandleVerifier [0x00007FF7C12C60B7+3488055]
-	GetHandleVerifier [0x00007FF7C12BF03F+3459263]
-	GetHandleVerifier [0x00007FF7C103B846+823494]
-	(No symbol) [0x00007FF7C0F05F9F]
-	(No symbol) [0x00007FF7C0F00EC4]
-	(No symbol) [0x00007FF7C0F01052]
-	(No symbol) [0x00007FF7C0EF18A4]
-	BaseThreadInitThunk [0x00007FFB0F507344+20]
-	RtlUserThreadStart [0x00007FFB10A026B1+33]
-</status>
-</kw>
-<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-05-01T17:01:28.452732" elapsed="2.516907"/>
-</kw>
-<status status="FAIL" start="2024-05-01T17:01:19.121199" elapsed="11.849274">UnexpectedAlertPresentException: Alert Text: Sorting is broken! This error has been reported to Backtrace.
-Message: unexpected alert open: {Alert text : Sorting is broken! This error has been reported to Backtrace.}
-  (Session info: chrome=124.0.6367.92)
-Stacktrace:
-	GetHandleVerifier [0x00007FF7C0F81502+60802]
-	(No symbol) [0x00007FF7C0EFAC02]
-	(No symbol) [0x00007FF7C0DB7CE4]
-	(No symbol) [0x00007FF7C0E4A986]
-	(No symbol) [0x00007FF7C0E2A923]
-	(No symbol) [0x00007FF7C0DF8FEC]
-	(No symbol) [0x00007FF7C0DF9C21]
-	GetHandleVerifier [0x00007FF7C128411D+3217821]
-	GetHandleVerifier [0x00007FF7C12C60B7+3488055]
-	GetHandleVerifier [0x00007FF7C12BF03F+3459263]
-	GetHandleVerifier [0x00007FF7C103B846+823494]
-	(No symbol) [0x00007FF7C0F05F9F]
-	(No symbol) [0x00007FF7C0F00EC4]
-	(No symbol) [0x00007FF7C0F01052]
-	(No symbol) [0x00007FF7C0EF18A4]
-	BaseThreadInitThunk [0x00007FFB0F507344+20]
-	RtlUserThreadStart [0x00007FFB10A026B1+33]
-</status>
-</test>
-<test id="s1-t4" name="Descending Price Product Filters" line="97">
-<kw name="Open Browser" owner="SeleniumLibrary" type="SETUP">
-<msg time="2024-05-01T17:01:30.981434" level="INFO">Opening browser 'chrome' to base url 'https://saucedemo.com/'.</msg>
-<arg>${WebSauceDemo}</arg>
-<arg>${BROWSER}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-05-01T17:01:30.980435" elapsed="4.940066"/>
-</kw>
-<kw name="User is on products page">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-05-01T17:01:35.922727" level="INFO">Typing text 'error_user' into text field '//input[@id='user-name']'.</msg>
-<arg>${UsernameField}</arg>
-<arg>error_user</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-01T17:01:35.922532" elapsed="0.200499"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-05-01T17:01:36.124881" level="INFO">Typing text 'secret_sauce' into text field '//input[@name='password']'.</msg>
-<arg>${PasswordField}</arg>
-<arg>secret_sauce</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-01T17:01:36.124065" elapsed="0.173499"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-05-01T17:01:36.298595" level="INFO">Clicking element '//input[@type='submit'][@value='Login']'.</msg>
-<arg>${LoginButton}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-01T17:01:36.298595" elapsed="0.162530"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-05-01T17:01:37.476137" level="INFO">Slept 1 second.</msg>
-<arg>1s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-05-01T17:01:36.462122" elapsed="1.014015"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${ProductSortButton}</arg>
-<arg>10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-05-01T17:01:37.477873" elapsed="0.046868"/>
-</kw>
-<status status="PASS" start="2024-05-01T17:01:35.921498" elapsed="1.603243"/>
-</kw>
-<kw name="User click product sort button">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-05-01T17:01:37.526739" level="INFO">Clicking element '//select[@class='product_sort_container'][@data-test='product-sort-container']'.</msg>
-<arg>${ProductSortButton}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-01T17:01:37.526739" elapsed="0.089757"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-05-01T17:01:38.626018" level="INFO">Slept 1 second.</msg>
-<arg>1s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-05-01T17:01:37.617494" elapsed="1.009216"/>
-</kw>
-<status status="PASS" start="2024-05-01T17:01:37.525739" elapsed="1.100971"/>
-</kw>
-<kw name="User verify descending price product sort option">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${DescPriceProductSortOption}</arg>
-<arg>10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-05-01T17:01:38.631659" elapsed="0.036898"/>
-</kw>
-<status status="PASS" start="2024-05-01T17:01:38.629662" elapsed="0.039893"/>
-</kw>
-<kw name="User click descending price product sort option">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-05-01T17:01:38.672591" level="INFO">Clicking element '//option[@value='hilo'][text()[contains(., 'Price (high to low)')]]'.</msg>
-<arg>${DescPriceProductSortOption}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-01T17:01:38.671551" elapsed="0.068816"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-05-01T17:01:39.750652" level="INFO">Slept 1 second.</msg>
-<arg>1s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-05-01T17:01:38.740367" elapsed="1.010626"/>
-</kw>
-<status status="PASS" start="2024-05-01T17:01:38.670554" elapsed="1.081051"/>
-</kw>
-<kw name="User verify descending price product sort result">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<msg time="2024-05-01T17:01:40.002206" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-18.png"&gt;&lt;img src="selenium-screenshot-18.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2024-05-01T17:01:40.002206" level="FAIL">UnexpectedAlertPresentException: Alert Text: Sorting is broken! This error has been reported to Backtrace.
-Message: unexpected alert open: {Alert text : Sorting is broken! This error has been reported to Backtrace.}
-  (Session info: chrome=124.0.6367.92)
-Stacktrace:
-	GetHandleVerifier [0x00007FF7C0F81502+60802]
-	(No symbol) [0x00007FF7C0EFAC02]
-	(No symbol) [0x00007FF7C0DB7CE4]
-	(No symbol) [0x00007FF7C0E4A986]
-	(No symbol) [0x00007FF7C0E2A923]
-	(No symbol) [0x00007FF7C0DF8FEC]
-	(No symbol) [0x00007FF7C0DF9C21]
-	GetHandleVerifier [0x00007FF7C128411D+3217821]
-	GetHandleVerifier [0x00007FF7C12C60B7+3488055]
-	GetHandleVerifier [0x00007FF7C12BF03F+3459263]
-	GetHandleVerifier [0x00007FF7C103B846+823494]
-	(No symbol) [0x00007FF7C0F05F9F]
-	(No symbol) [0x00007FF7C0F00EC4]
-	(No symbol) [0x00007FF7C0F01052]
-	(No symbol) [0x00007FF7C0EF18A4]
-	BaseThreadInitThunk [0x00007FFB0F507344+20]
-	RtlUserThreadStart [0x00007FFB10A026B1+33]
-</msg>
-<arg>//div[@class='inventory_item'][contains(., 'Sauce Labs Fleece Jacket')]</arg>
-<arg>10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="FAIL" start="2024-05-01T17:01:39.755633" elapsed="0.247616">UnexpectedAlertPresentException: Alert Text: Sorting is broken! This error has been reported to Backtrace.
-Message: unexpected alert open: {Alert text : Sorting is broken! This error has been reported to Backtrace.}
-  (Session info: chrome=124.0.6367.92)
-Stacktrace:
-	GetHandleVerifier [0x00007FF7C0F81502+60802]
-	(No symbol) [0x00007FF7C0EFAC02]
-	(No symbol) [0x00007FF7C0DB7CE4]
-	(No symbol) [0x00007FF7C0E4A986]
-	(No symbol) [0x00007FF7C0E2A923]
-	(No symbol) [0x00007FF7C0DF8FEC]
-	(No symbol) [0x00007FF7C0DF9C21]
-	GetHandleVerifier [0x00007FF7C128411D+3217821]
-	GetHandleVerifier [0x00007FF7C12C60B7+3488055]
-	GetHandleVerifier [0x00007FF7C12BF03F+3459263]
-	GetHandleVerifier [0x00007FF7C103B846+823494]
-	(No symbol) [0x00007FF7C0F05F9F]
-	(No symbol) [0x00007FF7C0F00EC4]
-	(No symbol) [0x00007FF7C0F01052]
-	(No symbol) [0x00007FF7C0EF18A4]
-	BaseThreadInitThunk [0x00007FFB0F507344+20]
-	RtlUserThreadStart [0x00007FFB10A026B1+33]
-</status>
-</kw>
-<status status="FAIL" start="2024-05-01T17:01:39.753661" elapsed="0.250587">UnexpectedAlertPresentException: Alert Text: Sorting is broken! This error has been reported to Backtrace.
-Message: unexpected alert open: {Alert text : Sorting is broken! This error has been reported to Backtrace.}
-  (Session info: chrome=124.0.6367.92)
-Stacktrace:
-	GetHandleVerifier [0x00007FF7C0F81502+60802]
-	(No symbol) [0x00007FF7C0EFAC02]
-	(No symbol) [0x00007FF7C0DB7CE4]
-	(No symbol) [0x00007FF7C0E4A986]
-	(No symbol) [0x00007FF7C0E2A923]
-	(No symbol) [0x00007FF7C0DF8FEC]
-	(No symbol) [0x00007FF7C0DF9C21]
-	GetHandleVerifier [0x00007FF7C128411D+3217821]
-	GetHandleVerifier [0x00007FF7C12C60B7+3488055]
-	GetHandleVerifier [0x00007FF7C12BF03F+3459263]
-	GetHandleVerifier [0x00007FF7C103B846+823494]
-	(No symbol) [0x00007FF7C0F05F9F]
-	(No symbol) [0x00007FF7C0F00EC4]
-	(No symbol) [0x00007FF7C0F01052]
-	(No symbol) [0x00007FF7C0EF18A4]
-	BaseThreadInitThunk [0x00007FFB0F507344+20]
-	RtlUserThreadStart [0x00007FFB10A026B1+33]
-</status>
-</kw>
-<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-05-01T17:01:40.006196" elapsed="2.531610"/>
-</kw>
-<status status="FAIL" start="2024-05-01T17:01:30.978439" elapsed="11.560986">UnexpectedAlertPresentException: Alert Text: Sorting is broken! This error has been reported to Backtrace.
-Message: unexpected alert open: {Alert text : Sorting is broken! This error has been reported to Backtrace.}
-  (Session info: chrome=124.0.6367.92)
-Stacktrace:
-	GetHandleVerifier [0x00007FF7C0F81502+60802]
-	(No symbol) [0x00007FF7C0EFAC02]
-	(No symbol) [0x00007FF7C0DB7CE4]
-	(No symbol) [0x00007FF7C0E4A986]
-	(No symbol) [0x00007FF7C0E2A923]
-	(No symbol) [0x00007FF7C0DF8FEC]
-	(No symbol) [0x00007FF7C0DF9C21]
-	GetHandleVerifier [0x00007FF7C128411D+3217821]
-	GetHandleVerifier [0x00007FF7C12C60B7+3488055]
-	GetHandleVerifier [0x00007FF7C12BF03F+3459263]
-	GetHandleVerifier [0x00007FF7C103B846+823494]
-	(No symbol) [0x00007FF7C0F05F9F]
-	(No symbol) [0x00007FF7C0F00EC4]
-	(No symbol) [0x00007FF7C0F01052]
-	(No symbol) [0x00007FF7C0EF18A4]
-	BaseThreadInitThunk [0x00007FFB0F507344+20]
-	RtlUserThreadStart [0x00007FFB10A026B1+33]
-</status>
-</test>
-<status status="FAIL" start="2024-05-01T17:00:53.174475" elapsed="49.387894"/>
+<status status="PASS" start="2024-05-02T21:52:32.380500" elapsed="29.132202"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="3" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="3" skip="0" id="s1" name="productFilters">productFilters</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="productFilters">productFilters</stat>
 </suite>
 </statistics>
 <errors>

@@ -2,18 +2,12 @@
 Library         SeleniumLibrary
 Test Setup      Open Browser    ${WebSauceDemo}     ${BROWSER}    
 Test Teardown   Close Browser    
+Variables       ../resources/login_locators.yaml
+Variables       ../resources/footer_links_locators.yaml
 
 *** Variables ***
 ${WebSauceDemo}     https://saucedemo.com/
 ${BROWSER}          chrome
-
-# Locator
-${UsernameField}            //input[@id='user-name']
-${PasswordField}            //input[@name='password']
-${LoginButton}              //input[@type='submit'][@value='Login']
-${TwitterButton}            //a[@target='_blank'][text()[contains(., 'Twitter')]]
-${FacebookButton}           //a[@target='_blank'][text()[contains(., 'Facebook')]]
-${LinkedInButton}           //a[@target='_blank'][text()[contains(., 'LinkedIn')]]
 
 *** Keywords ***
 User have login
@@ -42,7 +36,7 @@ User click facebook link button
 
 User verify facebook link result
     Switch Window   NEW
-    Wait For Expected Condition     Url To Be   https://web.facebook.com/saucelabs?_rdc=1&_rdr
+    Wait For Expected Condition     Url To Be   https://www.facebook.com/saucelabs
 
 User verify linkedin link button
     Wait Until Element Is Visible   ${LinkedInButton}   10s

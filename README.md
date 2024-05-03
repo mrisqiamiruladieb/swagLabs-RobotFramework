@@ -7,6 +7,7 @@ Web Automation
 <br>
 - **main:** utama
 - **POM:** Page Object Modelling
+- **GeRaTa:** Generate Random Data
   
 ## Problem and Solving
 ---

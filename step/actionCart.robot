@@ -1,5 +1,6 @@
 *** Settings ***
 Library                     SeleniumLibrary
+Library                     String
 Test Setup                  Open Browser    ${WebSauceDemo}     ${BROWSER}    
 Test Teardown               Close Browser       
 Variables                   ../resources/login_locators.yaml
@@ -81,9 +82,12 @@ Verify personal data checkout page
     Wait Until Element Is Visible   ${ContinueButton}   10s
 
 Fill data on personal data checkout page
-    Input Text  ${FirstNameField}   Red
-    Input Text  ${LastNameField}    Bulls
-    Input Text  ${Zip_PostalCodeField}  12321  
+    ${randomLetters}    Generate Random String  8   [LETTERS]
+    Input Text  ${FirstNameField}   ${randomLetters}_1234
+    ${randomLetters}    Generate Random String  8   [LETTERS]
+    Input Text  ${LastNameField}    5678_${randomLetters}
+    ${randomNumbers}    Generate Random String  5   [NUMBERS]
+    Input Text  ${Zip_PostalCodeField}  ${randomNumbers}
 
 Click continue button
     Click Element   ${ContinueButton}

@@ -9,6 +9,16 @@ Web Automation
 - **POM:** Page Object Modelling
 - **GeRaTa:** Generate Random Data
   
+## Pre-Requisite
+---
+1. Install python and pip
+2. Install Robot Framework
+   - CMD: `pip install robotframework`
+3. Install [Selenium Library](https://docs.robotframework.org/docs/different_libraries/selenium)
+4. Install WebDriver
+   - Chrome: [chromedriver.exe](https://chromedriver.chromium.org/downloads)
+   - Put it into: C:\Users\ [user]\AppData\Local\Programs\Python\Python38\ **here**
+
 ## Problem and Solving
 ---
 1. **Element not found:** The distance between keywords and arguments must be more than 1 space/tab is recommended 
